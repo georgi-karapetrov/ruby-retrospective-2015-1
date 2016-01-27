@@ -78,7 +78,7 @@ class Deck
   end
 
   def to_s
-    @cards.each { |card| p card.to_s }
+    @cards.map(&:to_s).join("\n")
   end
 
   def ranks
