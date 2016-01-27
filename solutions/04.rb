@@ -43,6 +43,10 @@ class Deck
   def initialize(cards = standard_cards)
     @cards = cards.dup
   end
+  
+  def each(&block)
+    @cards.each(&block)
+  end
 
   def size
     @cards.size
