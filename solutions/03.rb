@@ -1,10 +1,10 @@
 class Integer
   def prime?
-    return false if self == 0 or self == 1
+    return false if self == 1
 
-    upper_limit = self - 1
+    upper_limit = self ** 0.5
     range_array = *(2..upper_limit)
-    not range_array.any? { |x| self % x == 0 }
+    range_array.all? { |x| self % x != 0 }
   end
 end
 
@@ -142,3 +142,4 @@ module DrunkenMathematician
     largest_section.to_a
   end
 end
+
